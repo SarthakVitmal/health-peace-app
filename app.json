@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MindEase-app",
-    "slug": "MindEase-app",
+    "name": "MindEase",
+    "slug": "MindEase",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sarthakvitmal.mindeaseapp"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0cde7e8b-e0c9-47e2-b5e5-5a9db1a23bb8"
+      }
     }
   }
 }
