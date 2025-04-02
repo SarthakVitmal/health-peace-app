@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+# MindEase App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to the **MindEase App** 👋
 
-## Get started
+This is a mobile application built using **Expo** and **React Native** to provide mental health assistance with voice-to-text chat functionality.
 
-1. Install dependencies
+## 🚀 Get Started
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+### 1️⃣ Install Dependencies
+Run the following command inside the project folder:
+```sh
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2️⃣ Run the App Locally
 
-## Learn more
+#### ✅ Start the Expo Development Server
+```sh
+npx expo start
+```
+This will open the Expo Developer Tools in your browser.
 
-To learn more about developing your project with Expo, look at the following resources:
+#### ✅ Run on a Physical Android Device
+1. Install **Expo Go** from the Google Play Store.
+2. Ensure your **PC and Phone** are connected to the **same WiFi network**.
+3. Scan the **QR code** from the Expo Developer Tools on your phone.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Alternatively, use USB debugging:
+```sh
+npx expo run:android
+```
 
-## Join the community
+#### ✅ Run on an Android Emulator
+1. Open **Android Studio** and start an emulator.
+2. Run:
+   ```sh
+   npx expo run:android
+   ```
 
-Join our community of developers creating universal apps.
+#### ✅ Run on a Web Browser
+If you want to test the app in a browser:
+```sh
+npx expo start --web
+```
+Then open `http://localhost:19006/` in your browser.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 📦 Build the APK for Android
+To generate an **Android APK**, follow these steps:
+
+### 1️⃣ Initialize Expo Application Services (EAS)
+```sh
+eas project:init
+```
+
+### 2️⃣ Configure the Build
+```sh
+eas build:configure
+```
+
+### 3️⃣ Build an Android APK
+```sh
+eas build --platform android --profile preview
+```
+This will generate an **AAB file** by default. To generate an **APK**, modify `eas.json` to use `apk` format.
+
+Alternatively, you can use:
+```sh
+eas build --platform android --profile development
+```
+
+Once the build is complete, download the **APK** from the Expo dashboard or follow the terminal instructions.
+
+---
+
+## 📚 Learn More
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [Expo Router](https://docs.expo.dev/router/introduction/)
+
+---
+
+## 🤝 Join the Community
+
+- [Expo GitHub](https://github.com/expo/expo)
+- [Discord Community](https://chat.expo.dev)
+
+---
+
+## 🔄 Reset the Project
+To reset and start fresh:
+```sh
+npm run reset-project
+```
+This moves the starter code to **app-example/** and creates a new **app/** directory for development.
+
+---
+
+Happy Coding! 🚀
+

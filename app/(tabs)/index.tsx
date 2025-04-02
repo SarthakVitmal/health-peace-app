@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
+import { View, Text, StyleSheet, Animated, Easing, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useRef } from 'react';
@@ -38,7 +38,10 @@ export default function HomeScreen() {
         style={[styles.logoContainer, { opacity: fadeAnim, transform: [{ scale: scaleAnim }] }]}
       >
         <Animated.View style={[styles.logoCircle, styles.shadow]}>
-          <Ionicons name="leaf" size={32} color="#4CAF50" />
+          <Image
+            source={require('../../assets/images/icon.png')}
+            style={{ width: 45, height: 45, borderRadius: 50 }}
+          />
         </Animated.View>
         <Text style={styles.logoText}>MindEase</Text>
       </Animated.View>
@@ -53,7 +56,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#EEF2FF',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -63,14 +66,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   logoCircle: {
-    height: 48,
-    width: 48,
+    height: 45,
+    width: 45,
     borderRadius: 24,
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: '#4CAF50',
+    borderColor: '#fff',
   },
   logoText: {
     fontSize: 32,
@@ -80,11 +83,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter_700Bold', 
   },
   tagline: {
-    fontSize: 16,
-    color: '#666',
+    fontSize: 18,
+    color: '#000',
     letterSpacing: 1.2,
     marginTop: 8,
-    fontFamily: 'Inter_400Regular',
+    fontFamily: 'sans',
   },
   shadow: {
     shadowColor: '#4CAF50',
