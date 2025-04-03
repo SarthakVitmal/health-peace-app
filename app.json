@@ -37,13 +37,7 @@
       "favicon": "./assets/images/icon2.png"
     },
     "plugins": [
-      "expo-router",
-      [
-        "expo-av",
-        {
-          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone"
-        }
-      ]
+      "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
